@@ -2,6 +2,7 @@ const express = require("express"); //importando o express
 const app = express(); //iniciando o express
 
 app.set('view engine','ejs'); //dizendo para o express usar o EJS como View engine
+app.use(express.static('public'));
 
 app.get("/home",function(req,res){
     res.render("home");
